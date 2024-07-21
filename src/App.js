@@ -7,11 +7,11 @@ import store from './redux/store';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+     
         <Provider store={store}>
        <ClassPoints></ClassPoints>
        </Provider>
-      </header>
+    
     </div>
   );
 }

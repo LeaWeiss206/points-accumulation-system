@@ -1,18 +1,12 @@
-export const decreaseQty = (id) => {
+export const addPoints=(id,points) => {
     return{
-        type: "DECREASE_QTY",
-         id,
-    };
-} ;
-export const addQty=(id) => {
-    return{
-        type: "ADD_QTY",
+        type: "ADD_POINTS",
         id,
+        points,
     };
 } ;
-export const addSumQty=(id) => {
+export const resetPoints = () => {
     return{
-        type: "ADD_SUM_QTY",
-        id,
-    };
-} ;
+    type: 'RESET_POINTS'
+};
+};

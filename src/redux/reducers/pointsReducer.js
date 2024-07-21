@@ -7,30 +7,17 @@ const points =[
 
  const pointsReducer = (state = points, action) =>{
    switch (action.type) {
-      case "DECREASE_QTY":
+
+      case "ADD_POINTS":
           {
-              const newCarriages = [...state];
-              newCarriages.find((carriage) => carriage.id === action.id).qty -= 1;
-              newCarriages.find((carriage) => carriage.id === action.id).qtyInCart += 1
-              return newCarriages;
+              const newPoints = [...state];
+              newPoints.find((selectedclass) => selectedclass.id === action.id).points +=action.points;
+              return newPoints;
           }
-
-
-      case "ADD_QTY":
-          {
-              const newCarriages = [...state];
-              newCarriages.find((carriage) => carriage.id === action.id).qty += 1;
-              newCarriages.find((carriage) => carriage.id === action.id).qtyInCart -= 1
-              return newCarriages;
-          }
-      case "ADD_SUM_QTY":
-      {
-          const newCarriages = [...state];
-          newCarriages.find((carriage) => carriage.id === action.id).qty +=  newCarriages.find((carriage) => carriage.id === action.id).qtyInCart;
-          newCarriages.find((carriage) => carriage.id === action.id).qtyInCart = 0
-          return newCarriages; 
-      }
-
+      
+          case 'RESET_POINTS':
+            return state.map(point => ({ ...point, points: 0 }));
+       
       default:
           return state
   }

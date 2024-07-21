@@ -1,0 +1,149 @@
+/* Import cool fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&family=Rubik+Spray+Paint&display=swap');
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background: #F0F4F8; /* Light background color */
+}
+
+/* Container for the layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Section for points */
+.points-section {
+    flex: 7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center items vertically */
+    background: linear-gradient(135deg, #E0F7FA, #B2EBF2); /* Gradient background */
+}
+
+/* Logo section */
+.logo-section {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A4E1E0; /* Background color for logo section */
+}
+
+/* Adjust logo image size */
+.logo-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Shadow effect */
+}
+
+/* Styling for buttons */
+.button-container button {
+    background-color: #D8B773; /* Light brown color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+.button-container button:hover {
+    background-color: #004D40; /* Darker green color */
+    transform: scale(1.1);
+}
+
+/* Leading class styling */
+.leading-class {
+    font-size: 7rem;
+    color: #F48FB1; /* Light pink color */
+    margin: 20px;
+    font-family: 'Rubik Beastly', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+    animation: blink-scale 3s infinite; /* Add animation */
+    position: absolute; /* Prevent displacement of other elements */
+    top: 20px; /* Adjust top positioning to lift the section */
+}
+
+/* Keyframes for blinking and scaling */
+@keyframes blink-scale {
+    0%, 100% {
+        opacity: 1;
+        font-size: 4rem;
+    }
+    50% {
+        opacity: 0;
+        font-size: 6rem; /* Enlarge */
+    }
+}
+
+/* Points container styling */
+.points-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    font-family: 'Rubik Marker Hatch', sans-serif;
+}
+
+/* Points item styling */
+.points-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #FFFFFF; /* White background for items */
+    border: 2px solid #B2EBF2; /* Light cyan color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #AD656C; /* Dark red color */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.points-item:hover {
+    transform: scale(1.05); /* Slightly zoom on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Input and button styling */
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="number"], input[type="text"] {
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #D8B773; /* Dark brown color */
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+}
+
+button {
+    background-color: #D8B773; /* Light brown color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004D40; /* Darker green color */
+    transform: scale(1.1);
+}
