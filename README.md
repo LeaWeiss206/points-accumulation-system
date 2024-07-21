@@ -1,8 +1,8 @@
 # points-accumulation-system
 
 A React-based system for accumulating and managing points in competition programs.
-ך
-# link - https://points-accumulation-system.onrender.com
+
+ link - https://points-accumulation-system.onrender.com
 
 # Getting Started with Create React App
 
