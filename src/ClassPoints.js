@@ -46,7 +46,7 @@ export default function ClassPoints() {
                 </div> */}
                 {leadingClass && (
                     <div className="leading-class">
-                        הכיתה המובילה: {leadingClass}
+                        הכיתה המובילה: {sortedPoints[0].class}
                     </div>
                 )}
                 <div className="points-container">
